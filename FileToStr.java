@@ -7,7 +7,7 @@ public class FileToStr {
         FileInputStream inputStream1 = null;
         FileInputStream inputStream2 = null;
         try{
-        inputStream1 =new FileInputStream(args[0]);
+        inputStream1 =new FileInputStream(args[0]);//将两个文本字符读入
         inputStream2 =new FileInputStream(args[1]);
         byte[] bytes=new byte[inputStream1.available()];
         a =new String(bytes,0, inputStream1.read(bytes));
