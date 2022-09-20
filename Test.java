@@ -10,7 +10,7 @@ public class Test {
             String b = FileToStr.b;//接收待检测文件
             Float f = Distance.Levenshtein(a, b);//计算相似度
             System.out.println("结果预览");
-            System.out.println(f);
+            System.out.printf("%.2f",f);
             str = String.valueOf(f);
             str=String.format("%.2f",f);//保留两位小数
             StrToFile.main(args);//输出
