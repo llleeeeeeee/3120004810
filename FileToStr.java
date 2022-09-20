@@ -13,16 +13,21 @@ public class FileToStr {
         a =new String(bytes,0, inputStream1.read(bytes));
         bytes=new byte[inputStream2.available()];
         b =new String(bytes,0,inputStream2.read(bytes));
-        }catch (FileNotFoundException e){
-            System.out.println(e);
-        } catch (IOException e) {
+        }catch (IOException e){
             e.printStackTrace();
-        } finally {
+        }  finally {
             if(inputStream1 !=null){
                 try{
                 inputStream1.close();
                 }catch (IOException e){
-                    System.out.println(e);
+                    e.printStackTrace();
+                }
+            }
+            if(inputStream2 !=null){
+                try{
+                    inputStream2.close();
+                }catch (IOException e){
+                    e.printStackTrace();
                 }
             }
         }

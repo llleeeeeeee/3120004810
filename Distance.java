@@ -23,12 +23,10 @@ public class Distance {
                     }else{
                         distanceMatrix[y][x]=distanceMatrix[y-1][x]<distanceMatrix[y][x-1]?distanceMatrix[y-1][x]+1:distanceMatrix[y][x-1]+1;
                     }
-                    System.out.print("  "+distanceMatrix[y][x]);
                 }
-                System.out.println();
             }
             result=(float) distanceMatrix[checkedStr.length()][sourceStr.length()];
-            float max=checkedStr.length()>sourceStr.length()?checkedStr.length():sourceStr.length();
+            float max= Math.max(checkedStr.length(), sourceStr.length());
             return 1-result/max;
         }
     }
